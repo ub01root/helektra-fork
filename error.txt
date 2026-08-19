@@ -1,0 +1,28 @@
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for helektra 1.0-SNAPSHOT:
+[INFO]
+[INFO] helektra ........................................... SUCCESS [  1.646 s]
+[INFO] api ................................................ SUCCESS [01:28 min]
+[INFO] plugin ............................................. FAILURE [ 48.382 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  02:19 min
+[INFO] Finished at: 2026-08-18T22:08:51-05:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal on project plugin: Could not collect dependencies for project dev.voltic:plugin:jar:1.0-SNAPSHOT
+[ERROR] Failed to read artifact descriptor for team.unnamed:commandflow-bukkit-commandmap:jar:0.7.2
+[ERROR]         Caused by: The following artifacts could not be resolved: team.unnamed:commandflow-bukkit-commandmap:pom:0.7.2 (absent): Could not transfer artifact team.unnamed:commandflow-bukkit-commandmap:pom:0.7.2 from/to unnamed-public (https://repo.unnamed.team/repository/unnamed-releases/): status code: 521, reason phrase: <none> (521)
+[ERROR]
+[ERROR] -> [Help 1]
+[ERROR]
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR]
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/DependencyResolutionException
+[ERROR]
+[ERROR] After correcting the problems, you can resume the build with the command
+[ERROR]   mvn <args> -rf :plugin
+
+C:\Users\Alex\Desktop\helektra-practice>

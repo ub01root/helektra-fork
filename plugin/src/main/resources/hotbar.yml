@@ -1,0 +1,82 @@
+hotbar:
+  # ACTIONS:
+  # actions can be default triggered by default actions or custom using command
+  lobby:
+    items:
+      queue:
+        slot: 0
+        material: "DIAMOND_SWORD"
+        name: "&e&lJoin Queue &r&7(Right click)"
+        lore:
+          - "&7Click to join a game queue"
+        action: "JOIN_QUEUE"
+      kit_layout:
+        slot: 4
+        material: "BOOK"
+        name: "&e&lKit Layout &r&7(Right click)"
+        lore:
+          - "&7Customize your kit item layouts"
+          - "&7Click to select a kit"
+        action: "KIT_LAYOUT"
+      settings:
+        slot: 7
+        material: "ANVIL"
+        name: "&e&lSettings &r&7(Right click)"
+        lore:
+          - "&7Click to open settings"
+        action: "SETTINGS"
+      friends:
+        slot: 8
+        material: "PLAYER_HEAD"
+        name: "&e&lFriends &r&7(Right click)"
+        lore:
+          - "&7Click to manage friends"
+        action: "FRIENDS_MENU"
+      cosmetics:
+        slot: 1
+        material: "NETHER_STAR"
+        name: "&e&lCosmetics &r&7(Right click)"
+        lore:
+          - "&7Browse lobby cosmetics"
+        action: "COSMETICS_MENU"
+      events:
+        slot: 6
+        material: "CLOCK"
+        name: "&e&lEvents &r&7(Right click)"
+        lore:
+          - "&7View active events"
+        action: "/events"
+
+  in_queue:
+    items:
+      leave:
+        slot: 8
+        material: "REDSTONE"
+        name: "&c&lLeave Queue &r&7(Right click)"
+        lore:
+          - "&7Cancel the current queue"
+        action: "LEAVE_QUEUE"
+
+  spectator:
+    items:
+      teleporter:
+        slot: 0
+        material: "COMPASS"
+        name: "&e&lSpectator Teleporter &r&7(Right click)"
+        lore:
+          - "&7Navigate to players in the match"
+        action: "/spectate menu"
+      visibility:
+        slot: 4
+        material: "ENDER_EYE"
+        name: "&e&lToggle Spectators &r&7(Right click)"
+        lore:
+          - "&7Toggle other spectators"
+        action: "/spectate toggle"
+      leave:
+        slot: 8
+        material: "BARRIER"
+        name: "&c&lReturn to Lobby &r&7(Right click)"
+        lore:
+          - "&7Leave spectating and return to lobby"
+        action: "/spectate leave"

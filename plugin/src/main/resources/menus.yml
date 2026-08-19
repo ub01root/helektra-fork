@@ -1,0 +1,930 @@
+settings:
+  title: "&eSettings"
+  size: 27
+  paginated: true
+
+  content:
+    start-slot: 10
+    end-slot: 16
+    auto-borders: true
+
+  sounds:
+    open:
+      sound: UI_BUTTON_CLICK
+      volume: 0.8
+      pitch: 1.2
+    close:
+      sound: UI_BUTTON_CLICK
+      volume: 0.8
+      pitch: 0.8
+    default-click:
+      sound: UI_BUTTON_CLICK
+      volume: 1.0
+      pitch: 1.0
+
+  items:
+    filler:
+      material: GRAY_STAINED_GLASS_PANE
+      name: "&7"
+      lore: []
+
+    duel-requests:
+      material: DIAMOND_SWORD
+      enabled-name: "&6&lDuel Requests"
+      disabled-name: "&6&lDuel Requests"
+      description: "&7Allow players to challenge you to duels."
+      placeholders:
+        yes: "Yes"
+        no: "No"
+        selected-yes-prefix: "&e&l█ &a&l"
+        selected-no-prefix: "&e&l█ &c&l"
+        unselected-prefix: "&e&l▌ &7"
+      lore:
+        - "%description%"
+        - ""
+        - "%status_yes%"
+        - "%status_no%"
+        - ""
+        - "&eClick to change!"
+      messages:
+        enabled: "profile.settings.duel-requests.enabled"
+        disabled: "profile.settings.duel-requests.disabled"
+
+    party-requests:
+      material: CAKE
+      enabled-name: "&6&lParty Requests"
+      disabled-name: "&6&lParty Requests"
+      description: "&7Receive party invitations from other players."
+      placeholders:
+        yes: "Yes"
+        no: "No"
+        selected-yes-prefix: "&e&l█ &a&l"
+        selected-no-prefix: "&e&l█ &c&l"
+        unselected-prefix: "&e&l▌ &7"
+      lore:
+        - "%description%"
+        - ""
+        - "%status_yes%"
+        - "%status_no%"
+        - ""
+        - "&eClick to change!"
+      messages:
+        enabled: "profile.settings.party-requests.enabled"
+        disabled: "profile.settings.party-requests.disabled"
+
+    spectators:
+      material: ENDER_EYE
+      enabled-name: "&6&lSpectators"
+      disabled-name: "&6&lSpectators"
+      description: "&7Allow spectators to watch your matches."
+      placeholders:
+        yes: "Yes"
+        no: "No"
+        selected-yes-prefix: "&e&l█ &a&l"
+        selected-no-prefix: "&e&l█ &c&l"
+        unselected-prefix: "&e&l▌ &7"
+      lore:
+        - "%description%"
+        - ""
+        - "%status_yes%"
+        - "%status_no%"
+        - ""
+        - "&eClick to change!"
+      messages:
+        enabled: "profile.settings.spectators.enabled"
+        disabled: "profile.settings.spectators.disabled"
+
+    view-players:
+      material: PLAYER_HEAD
+      enabled-name: "&6&lPlayer Visibility"
+      disabled-name: "&6&lPlayer Visibility"
+      description: "&7Show or hide players in the lobby."
+      placeholders:
+        yes: "Yes"
+        no: "No"
+        selected-yes-prefix: "&e&l█ &a&l"
+        selected-no-prefix: "&e&l█ &c&l"
+        unselected-prefix: "&e&l▌ &7"
+      lore:
+        - "%description%"
+        - ""
+        - "%status_yes%"
+        - "%status_no%"
+        - ""
+        - "&eClick to change!"
+      messages:
+        enabled: "profile.settings.view-players.enabled"
+        disabled: "profile.settings.view-players.disabled"
+
+    event-messages:
+      material: PAPER
+      enabled-name: "&6&lEvent Messages"
+      disabled-name: "&6&lEvent Messages"
+      description: "&7Receive broadcast event notifications."
+      placeholders:
+        yes: "Yes"
+        no: "No"
+        selected-yes-prefix: "&e&l█ &a&l"
+        selected-no-prefix: "&e&l█ &c&l"
+        unselected-prefix: "&e&l▌ &7"
+      lore:
+        - "%description%"
+        - ""
+        - "%status_yes%"
+        - "%status_no%"
+        - ""
+        - "&eClick to change!"
+      messages:
+        enabled: "profile.settings.event-messages.enabled"
+        disabled: "profile.settings.event-messages.disabled"
+
+    kit-mode:
+      material: CHEST
+      enabled-name: "&6&lKit Mode"
+      disabled-name: "&6&lKit Mode"
+      description: "&7Automatically equip your saved kit layouts."
+      placeholders:
+        yes: "Yes"
+        no: "No"
+        selected-yes-prefix: "&e&l█ &a&l"
+        selected-no-prefix: "&e&l█ &c&l"
+        unselected-prefix: "&e&l▌ &7"
+      lore:
+        - "%description%"
+        - ""
+        - "%status_yes%"
+        - "%status_no%"
+        - ""
+        - "&eClick to change!"
+      messages:
+        enabled: "profile.settings.kit-mode.enabled"
+        disabled: "profile.settings.kit-mode.disabled"
+
+    ping-matchmaking:
+      material-enabled: COMPASS
+      material-disabled: REDSTONE_COMPARATOR
+      enabled-name: "&6&lPing Matchmaking"
+      disabled-name: "&6&lPing Matchmaking"
+      description: "&7Limit matchmaking by your preferred ping."
+      placeholders:
+        yes: "Yes"
+        no: "No"
+        selected-yes-prefix: "&e&l█ &a&l"
+        selected-no-prefix: "&e&l█ &c&l"
+        unselected-prefix: "&e&l▌ &7"
+      lore:
+        - "%description%"
+        - ""
+        - "%status_yes%"
+        - "%status_no%"
+        - ""
+        - "&eClick to change!"
+        - "&7Right-click to configure range."
+      messages:
+        enabled: "profile.settings.ping-matchmaking.enabled"
+        disabled: "profile.settings.ping-matchmaking.disabled"
+
+    lobby-time:
+      material: CLOCK
+      name: "&6&lLobby Time"
+      description: "&7Select the lobby time of day."
+      states:
+        day: "&aDay"
+        afternoon: "&6Afternoon"
+        night: "&dNight"
+      lore:
+        - "%description%"
+        - ""
+        - "&7Time: %status%"
+        - ""
+        - "&eClick to change!"
+      messages:
+        updated: "profile.settings.lobby-time.updated"
+
+    pagination-previous:
+      slot: 18
+      material: ARROW
+      name: "&ePrevious Page"
+      lore:
+        - "&7Go back to page: {previous-page}/{max-page}"
+
+    pagination-next:
+      slot: 26
+      material: ARROW
+      name: "&eNext Page"
+      lore:
+        - "&7Go to page: {next-page}/{max-page}"
+
+cosmetics:
+  title: "&d&lCosmetics"
+  size: 54
+  paginated: true
+
+  content:
+    start-slot: 10
+    end-slot: 43
+    auto-borders: true
+
+  sounds:
+    open:
+      sound: UI_BUTTON_CLICK
+      volume: 0.8
+      pitch: 1.2
+    close:
+      sound: UI_BUTTON_CLICK
+      volume: 0.8
+      pitch: 0.8
+    default-click:
+      sound: UI_BUTTON_CLICK
+      volume: 1.0
+      pitch: 1.0
+
+  items:
+    filler:
+      material: GRAY_STAINED_GLASS_PANE
+      name: "&7"
+      lore: []
+
+    back:
+      slot: 49
+      material: RED_STAINED_GLASS_PANE
+      name: "&c&lBack"
+      lore:
+        - "&7Return to previous menu"
+
+    pagination-previous:
+      slot: 45
+      material: ARROW
+      name: "&ePrevious Page"
+      lore:
+        - "&7Go back to page: {previous-page}/{max-page}"
+
+    pagination-next:
+      slot: 53
+      material: ARROW
+      name: "&eNext Page"
+      lore:
+        - "&7Go to page: {next-page}/{max-page}"
+
+friends:
+  title: "&a☻ Friends"
+  size: 54
+  paginated: true
+  content:
+    start-slot: 10
+    end-slot: 34
+    auto-borders: false
+  sounds:
+    open:
+      sound: UI_BUTTON_CLICK
+      volume: 0.8
+      pitch: 1.2
+    close:
+      sound: UI_BUTTON_CLICK
+      volume: 0.8
+      pitch: 0.8
+    default-click:
+      sound: UI_BUTTON_CLICK
+      volume: 1.0
+      pitch: 1.0
+  messages:
+    profile-missing: "&cUnable to load your profile."
+    empty: "&eYou have no friends yet."
+  items:
+    filler:
+      material: GRAY_STAINED_GLASS_PANE
+      name: "&7"
+      lore: []
+    top-border-left:
+      slot: 0
+      material: BLACK_STAINED_GLASS_PANE
+      name: "&0"
+      lore: []
+    top-border-right:
+      slot: 8
+      material: BLACK_STAINED_GLASS_PANE
+      name: "&0"
+      lore: []
+    bottom-border-left:
+      slot: 36
+      material: BLACK_STAINED_GLASS_PANE
+      name: "&0"
+      lore: []
+    bottom-border-right:
+      slot: 44
+      material: BLACK_STAINED_GLASS_PANE
+      name: "&0"
+      lore: []
+    friend-entry:
+      material: PLAYER_HEAD
+      name: "&a#{position} &f{friend}"
+      lore:
+        - "&7Status&8: {status}"
+        - "&7Online&8: {online}"
+        - ""
+        - "&eClick to manage"
+      placeholders:
+        status:
+          pending: "&ePending"
+          accepted: "&aFriend"
+          blocked: "&cBlocked"
+        online: "&aOnline"
+        offline: "&cOffline"
+    empty-slot:
+      material: GRAY_STAINED_GLASS_PANE
+      name: "&7Empty Slot"
+      lore:
+        - "&7Add more friends using the button below."
+    pagination-previous:
+      slot: 45
+      material: ARROW
+      name: "&ePrevious Page"
+      lore:
+        - "&7Go back to page: {previous-page}/{max-page}"
+    pagination-next:
+      slot: 53
+      material: ARROW
+      name: "&eNext Page"
+      lore:
+        - "&7Go to page: {next-page}/{max-page}"
+    add-friend:
+      slot: 49
+      material: EMERALD
+      name: "&aAdd Friend"
+      lore:
+        - "&7Click to add a new friend."
+        - "&8You will be asked for their name in chat."
+    incoming-requests:
+      slot: 48
+      material: LIME_DYE
+      name: "&aIncoming Requests &7({count})"
+      lore:
+        - "&7View friend requests you have received."
+        - ""
+        - "&ePending: &f{count}"
+        - ""
+        - "&eClick to view!"
+    sent-requests:
+      slot: 50
+      material: ORANGE_DYE
+      name: "&6Sent Requests &7({count})"
+      lore:
+        - "&7View friend requests you have sent."
+        - ""
+        - "&ePending: &f{count}"
+        - ""
+        - "&eClick to view!"
+
+friend-requests:
+  title: "&aIncoming Friend Requests"
+  size: 54
+  paginated: true
+  content:
+    start-slot: 10
+    end-slot: 43
+    auto-borders: true
+  sounds:
+    open:
+      sound: UI_BUTTON_CLICK
+      volume: 0.8
+      pitch: 1.2
+    close:
+      sound: UI_BUTTON_CLICK
+      volume: 0.8
+      pitch: 0.8
+    default-click:
+      sound: UI_BUTTON_CLICK
+      volume: 1.0
+      pitch: 1.0
+  messages:
+    empty: "&eYou have no incoming friend requests."
+  items:
+    filler:
+      material: GRAY_STAINED_GLASS_PANE
+      name: "&7"
+      lore: []
+    back:
+      slot: 49
+      material: ARROW
+      name: "&cBack"
+      lore:
+        - "&7Return to friends menu"
+    pagination-previous:
+      slot: 45
+      material: ARROW
+      name: "&e&lPrevious Page"
+      lore:
+        - "&7Click to view previous page"
+    pagination-next:
+      slot: 53
+      material: ARROW
+      name: "&e&lNext Page"
+      lore:
+        - "&7Click to view next page"
+
+sent-requests:
+  title: "&6Sent Friend Requests"
+  size: 54
+  paginated: true
+  content:
+    start-slot: 10
+    end-slot: 43
+    auto-borders: true
+  sounds:
+    open:
+      sound: UI_BUTTON_CLICK
+      volume: 0.8
+      pitch: 1.2
+    close:
+      sound: UI_BUTTON_CLICK
+      volume: 0.8
+      pitch: 0.8
+    default-click:
+      sound: UI_BUTTON_CLICK
+      volume: 1.0
+      pitch: 1.0
+  messages:
+    empty: "&eYou have no pending friend requests."
+  items:
+    filler:
+      material: GRAY_STAINED_GLASS_PANE
+      name: "&7"
+      lore: []
+    back:
+      slot: 49
+      material: ARROW
+      name: "&cBack"
+      lore:
+        - "&7Return to friends menu"
+    pagination-previous:
+      slot: 45
+      material: ARROW
+      name: "&e&lPrevious Page"
+      lore:
+        - "&7Click to view previous page"
+    pagination-next:
+      slot: 53
+      material: ARROW
+      name: "&e&lNext Page"
+      lore:
+        - "&7Click to view next page"
+
+friend-options:
+  title: "&aFriend Options"
+  size: 27
+  sounds:
+    open:
+      sound: UI_BUTTON_CLICK
+      volume: 0.8
+      pitch: 1.2
+    close:
+      sound: UI_BUTTON_CLICK
+      volume: 0.8
+      pitch: 0.8
+    default-click:
+      sound: UI_BUTTON_CLICK
+      volume: 1.0
+      pitch: 1.0
+  messages:
+    no-selection: "&cSelect a friend first."
+  items:
+    filler:
+      material: GRAY_STAINED_GLASS_PANE
+      name: "&7"
+      lore: []
+    info:
+      slot: 13
+      material: PLAYER_HEAD
+      name: "&a{friend}"
+      lore:
+        - "&7Status: {status}"
+        - "&7Online: {online}"
+        - ""
+        - "&eManage your friend below"
+    remove:
+      slot: 10
+      material: RED_DYE
+      name: "&cRemove Friend"
+      lore:
+        - "&7Remove &f{friend} &7from your"
+        - "&7friends list."
+        - ""
+        - "&cClick to remove!"
+      messages:
+        success: "&cRemoved &f{friend} &cfrom your friends list."
+    invite:
+      slot: 12
+      material: LIME_DYE
+      name: "&aInvite to Party"
+      lore:
+        - "&7Send a party invite to"
+        - "&f{friend}&7."
+        - ""
+        - "&eClick to invite!"
+      command: "party invite {friend}"
+      messages:
+        success: "&aSent party invite to &f{friend}&a!"
+    view-stats:
+      slot: 14
+      material: BOOK
+      name: "&eView Stats"
+      lore:
+        - "&7View statistics for"
+        - "&f{friend}&7."
+        - ""
+        - "&8Coming soon..."
+    back:
+      slot: 22
+      material: ARROW
+      name: "&cBack"
+      lore:
+        - "&7Return to friends menu"
+
+ping-matchmaking:
+  title: "&6&lPing Matchmaking Settings"
+  size: 27
+  items:
+    min-ping-display:
+      position: 4
+      material: EMERALD
+      name: "&aMinimum Ping: &f{value}ms"
+      lore:
+        - ""
+        - "&7Adjust the minimum ping to"
+        - "&7find matches."
+        - ""
+        - "&eUse the buttons below"
+
+    min-ping-decrease-10:
+      position: 1
+      material: RED_WOOL
+      name: "&c-10 ms"
+      lore:
+        - "&7Click to decrease"
+
+    min-ping-decrease-1:
+      position: 2
+      material: ORANGE_WOOL
+      name: "&6-1 ms"
+      lore:
+        - "&7Click to decrease"
+
+    min-ping-increase-1:
+      position: 6
+      material: LIME_WOOL
+      name: "&a+1 ms"
+      lore:
+        - "&7Click to increase"
+
+    min-ping-increase-10:
+      position: 7
+      material: GREEN_WOOL
+      name: "&a+10 ms"
+      lore:
+        - "&7Click to increase"
+
+    max-ping-display:
+      position: 13
+      material: REDSTONE
+      name: "&cMaximum Ping: &f{value}ms"
+      lore:
+        - ""
+        - "&7Adjust the maximum ping to"
+        - "&7find matches."
+        - ""
+        - "&eUse the buttons below"
+
+    max-ping-decrease-10:
+      position: 10
+      material: RED_WOOL
+      name: "&c-10 ms"
+      lore:
+        - "&7Click to decrease"
+
+    max-ping-decrease-1:
+      position: 11
+      material: ORANGE_WOOL
+      name: "&6-1 ms"
+      lore:
+        - "&7Click to decrease"
+
+    max-ping-increase-1:
+      position: 15
+      material: LIME_WOOL
+      name: "&a+1 ms"
+      lore:
+        - "&7Click to increase"
+
+    max-ping-increase-10:
+      position: 16
+      material: GREEN_WOOL
+      name: "&a+10 ms"
+      lore:
+        - "&7Click to increase"
+
+    back:
+      position: 18
+      material: BARRIER
+      name: "&cBack"
+      lore:
+        - "&7Back to settings menu"
+
+    preset-low:
+      position: 24
+      material: GOLD_INGOT
+      name: "&ePreset: Low Ping"
+      lore:
+        - "&7Min: &a{min}ms &7| Max: &c{max}ms"
+        - ""
+        - "&eClick to apply"
+      messages:
+        applied: "&aPreset applied: &fLow Ping"
+
+    preset-medium:
+      position: 25
+      material: DIAMOND
+      name: "&bPreset: Medium Ping"
+      lore:
+        - "&7Min: &a{min}ms &7| Max: &c{max}ms"
+        - ""
+        - "&eClick to apply"
+      messages:
+        applied: "&aPreset applied: &fMedium Ping"
+
+    preset-unlimited:
+      position: 26
+      material: NETHER_STAR
+      name: "&fPreset: Unlimited"
+      lore:
+        - "&7Min: &a{min}ms &7| Max: &c{max}ms"
+        - ""
+        - "&eClick to apply"
+      messages:
+        applied: "&aPreset applied: &fUnlimited"
+
+kit-selector:
+  title: "&6&lKit Selection"
+  size: 27
+  items:
+    info:
+      position: 4
+      material: BOOK
+      name: "&eKit Information"
+      lore:
+        - "&7Select a kit to use in matches"
+        - ""
+        - "&fAvailable Kits&7: {count}"
+
+queue:
+  title: "&6Queue Menu"
+  size: 27
+  items:
+    unranked:
+      position: 11
+      material: IRON_SWORD
+      name: "&eUnranked Queue"
+      lore:
+        - "&7Play casual matches"
+        - "&7without ranking"
+        - ""
+        - "&eClick to browse kits"
+    ranked:
+      position: 15
+      material: DIAMOND_SWORD
+      name: "&cRanked Queue"
+      lore:
+        - "&7Compete for ranking"
+        - "&7and climb the ladder"
+        - ""
+        - "&eClick to browse kits"
+
+unranked-kits:
+  title: "&eUnranked - Select Kit"
+  size: 27
+  items: {}
+
+ranked-kits:
+  title: "&cRanked - Select Kit"
+  size: 27
+  items: {}
+
+duel-kit:
+  title: "&6Duel - Select Kit"
+  size: 27
+  items: {}
+
+duel-arena:
+  title: "&6Duel - Select Arena"
+  size: 27
+  items: {}
+
+duel-rounds:
+  title: "&6Duel - Select Rounds"
+  size: 27
+  items: {}
+
+ffa:
+  title: "&6FFA Modes"
+  size: 27
+  items:
+    ffa:
+      position: 10
+      material: IRON_SWORD
+      name: "&aFFA"
+      lore:
+        - "&7Free for all battle"
+        - ""
+        - "&eClick to select"
+    party_ffa:
+      position: 13
+      material: DIAMOND_SWORD
+      name: "&bParty FFA"
+      lore:
+        - "&7Requires a party"
+        - ""
+        - "&eClick to select"
+    range_rover:
+      position: 16
+      material: BOW
+      name: "&dRange Rover"
+      lore:
+        - "&7Available only in parties"
+        - ""
+        - "&eClick to select"
+
+ffa-kit:
+  title: "&6FFA - Select Kit"
+  size: 27
+  items: {}
+
+ffa-arena:
+  title: "&6FFA - Select Arena"
+  size: 27
+  items: {}
+
+unranked:
+  title: "&6&lUnranked Match Types"
+  size: 27
+  items:
+    duel:
+      position: 2
+      material: DIAMOND_SWORD
+      name: "&a1v1 Duel"
+      lore:
+        - "&fType&7: {type}"
+        - "&fPlayers&7: {min_players} vs {min_players}"
+        - ""
+        - "&eClick to select kit"
+    queue:
+      position: 6
+      material: IRON_SWORD
+      name: "&aQueued 1v1"
+      lore:
+        - "&fType&7: {type}"
+        - "&fPlayers&7: {min_players} vs {min_players}"
+        - ""
+        - "&eClick to select kit"
+    ffa:
+      position: 11
+      material: GOLDEN_SWORD
+      name: "&6Free For All"
+      lore:
+        - "&fType&7: {type}"
+        - "&fPlayers&7: {min_players}-{max_players}"
+        - ""
+        - "&eClick to select kit"
+    range_rover:
+      position: 13
+      material: NETHERITE_SWORD
+      name: "&cRange Rover"
+      lore:
+        - "&fType&7: {type}"
+        - "&fPlayers&7: {min_players}-{max_players}"
+        - ""
+        - "&eClick to select kit"
+    party_ffa:
+      position: 15
+      material: ENCHANTED_GOLDEN_APPLE
+      name: "&dParty FFA"
+      lore:
+        - "&fType&7: {type}"
+        - "&fPlayers&7: {min_players}-{max_players}"
+        - ""
+        - "&eClick to select kit"
+
+ranked:
+  title: "&6&lRanked Match Types"
+  size: 27
+  items:
+    duel:
+      position: 2
+      material: DIAMOND_SWORD
+      name: "&a1v1 Ranked Duel"
+      lore:
+        - "&fType&7: {type}"
+        - "&fPlayers&7: {min_players} vs {min_players}"
+        - ""
+        - "&eClick to select kit"
+    queue:
+      position: 6
+      material: IRON_SWORD
+      name: "&aQueued Ranked 1v1"
+      lore:
+        - "&fType&7: {type}"
+        - "&fPlayers&7: {min_players} vs {min_players}"
+        - ""
+        - "&eClick to select kit"
+    ffa:
+      position: 11
+      material: GOLDEN_SWORD
+      name: "&6Ranked FFA"
+      lore:
+        - "&fType&7: {type}"
+        - "&fPlayers&7: {min_players}-{max_players}"
+        - ""
+        - "&eClick to select kit"
+    range_rover:
+      position: 13
+      material: NETHERITE_SWORD
+      name: "&cRanked Range Rover"
+      lore:
+        - "&fType&7: {type}"
+        - "&fPlayers&7: {min_players}-{max_players}"
+        - ""
+        - "&eClick to select kit"
+    party_ffa:
+      position: 15
+      material: ENCHANTED_GOLDEN_APPLE
+      name: "&dRanked Party FFA"
+      lore:
+        - "&fType&7: {type}"
+        - "&fPlayers&7: {min_players}-{max_players}"
+        - ""
+        - "&eClick to select kit"
+
+kit-selection:
+  title: "&6&lKit Selection"
+  size: 27
+  items:
+    info:
+      position: 4
+      material: BOOK
+      name: "&eKit Information"
+      lore:
+        - "&7Select a kit to start your match"
+        - ""
+        - "&fAvailable Kits&7: {count}"
+
+kit-layout-selector:
+  title: "&6&lSelect Kit to Edit Layout"
+  size: 27
+  kit-name-format: "&e{kit}"
+  kit-lore:
+    - "&7Click to edit this kit's layout"
+    - ""
+    - "&eCustomize your item arrangement!"
+
+kit-layout-editor:
+  title: "&6&lKit Layout Editor"
+  size: 27
+  items:
+    save:
+      position: 10
+      material: LIME_WOOL
+      name: "&aSave Layout"
+      lore:
+        - "&7Save your custom layout"
+        - "&7and return to kit selector."
+        - ""
+        - "&eClick to save!"
+    back:
+      position: 13
+      material: ARROW
+      name: "&cBack"
+      lore:
+        - "&7Return to kit selector"
+        - "&7without saving changes."
+        - ""
+        - "&eClick to go back!"
+    reset:
+      position: 16
+      material: YELLOW_WOOL
+      name: "&eReset to Default"
+      lore:
+        - "&7Restore the default"
+        - "&7kit layout."
+        - ""
+        - "&eClick to reset!"
+    filler:
+      material: GRAY_STAINED_GLASS_PANE
+      name: "&0"
+  messages:
+    saved: "&aYour layout has been saved!"
+    reset: "&eLayout restored to default."
+    back: "&7Returning to kit selector..."
+
+profile:
+  loading-title: "&eLoading Profile..."
+  loading-message: "&7Please wait while we load your data"
+  error-title: "&cError"
+  error-message: "&cFailed to load profile"
